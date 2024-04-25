@@ -22,7 +22,7 @@ RUN \
         wheel \
     && pip3 install --no-cache-dir \
         --extra-index-url https://www.piwheels.org/simple \
-        "wyoming-porcupine@git+https://github.com/chatziko/wyoming-porcupine@${WYOMING_PORCUPINE_VERSION}" \
+        "wyoming-porcupine@git+https://github.com/Al3XKOoL/wyoming-porcupine@${WYOMING_PORCUPINE_VERSION}" \
     \
     && rm -rf /var/lib/apt/lists/*
 
