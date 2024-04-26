@@ -13,8 +13,10 @@ discovery:
   - wyoming
 map:
   - share:ro
+  - /proc:ro
+devices:
+  - /proc/cpuinfo
 full_access: true
-map: /proc
 options:
   sensitivity: 0.5
   debug_logging: false
