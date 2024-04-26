@@ -13,7 +13,6 @@ discovery:
   - wyoming
 map:
   - share:ro
-  - /proc:ro
 devices:
   - /proc/cpuinfo
 full_access: true
