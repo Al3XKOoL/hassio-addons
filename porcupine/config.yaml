@@ -3,7 +3,7 @@ version: 1.1.0
 slug: porcupine
 name: porcupine
 description: porcupine using the Wyoming protocol
-url: https://github.com/chatziko/hassio-addons/tree/main/porcupine
+url: https://github.com/Al3XKOoL/hassio-addons/tree/main/porcupine
 arch:
   - amd64
   - aarch64
