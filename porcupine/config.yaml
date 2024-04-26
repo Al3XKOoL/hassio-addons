@@ -15,7 +15,6 @@ map:
   - share:ro
 devices:
   - /proc/cpuinfo
-full_access: true
 options:
   sensitivity: 0.5
   debug_logging: false
