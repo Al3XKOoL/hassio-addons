@@ -6,7 +6,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install porcupine
 WORKDIR /usr/src
-ENV WYOMING_PORCUPINE_VERSION=c63f7fe98a5e3296a706399889f65c5a0f88f231
+#ENV WYOMING_PORCUPINE_VERSION=c63f7fe98a5e3296a706399889f65c5a0f88f231
 ENV PIP_BREAK_SYSTEM_PACKAGES=1
 
 RUN \
@@ -22,7 +22,7 @@ RUN \
         wheel \
     && pip3 install --no-cache-dir \
         --extra-index-url https://www.piwheels.org/simple \
-        "wyoming-porcupine@git+https://github.com/chatziko/wyoming-porcupine@${WYOMING_PORCUPINE_VERSION}" \
+        "wyoming-porcupine@git+https://github.com/Al3XKOoL/wyoming-porcupine@master" \
     \
     && rm -rf /var/lib/apt/lists/*
 
