@@ -1,6 +1,12 @@
 # Changelog
 
-## 1.1.0
+## 1.5.3-1
+
+- RK3588 Support with modded pvporcupine
+- Upgrade to porcupine v3.0.2
+- Upgrade wyoming to 1.5.3
+
+## 1.1.0 (Last maintiner version)
 
 - Upgrade to porcupine v3.0
 
