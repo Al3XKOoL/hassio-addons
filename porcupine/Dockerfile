@@ -29,6 +29,8 @@ RUN \
 WORKDIR /
 COPY rootfs /
 
+RUN git clone https://github.com/Al3XKOoL/porcupine.git && cd ./porcupine/binding/python && python3 setup.py install
+
 HEALTHCHECK --start-period=10m \
     CMD echo '{ "type": "describe" }' \
         | nc -w 1 localhost 10400 \
