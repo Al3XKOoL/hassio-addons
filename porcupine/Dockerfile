@@ -16,11 +16,13 @@ RUN \
         python3 \
         git \
         python3-pip \
+        python3-venv \
     \
-    && pip3 install --no-cache-dir -U \
+    && python3 -m venv .venv \
+    && .venv/bin/pip3 install --no-cache-dir -U \
         setuptools \
         wheel \
-    && pip3 install --no-cache-dir \
+    && .venv/bin/pip3 install --no-cache-dir \
         --extra-index-url https://www.piwheels.org/simple \
         "wyoming-porcupine@git+https://github.com/Al3XKOoL/wyoming-porcupine@master" \
     \
