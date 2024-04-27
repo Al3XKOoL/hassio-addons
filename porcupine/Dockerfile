@@ -28,10 +28,10 @@ RUN \
     \
     && rm -rf /var/lib/apt/lists/*
 
+RUN git clone https://github.com/Al3XKOoL/porcupine.git && cd ./porcupine/binding/python && ../../../.venv/bin/python3 setup.py install
+
 WORKDIR /
 COPY rootfs /
-
-RUN git clone https://github.com/Al3XKOoL/porcupine.git && cd ./porcupine/binding/python && python3 setup.py install
 
 HEALTHCHECK --start-period=10m \
     CMD echo '{ "type": "describe" }' \
