@@ -3,6 +3,7 @@
 # ==============================================================================
 # Start porcupine service
 # ==============================================================================
+cd /usr/src
 flags=()
 
 if bashio::config.true 'debug_logging'; then
@@ -11,7 +12,7 @@ fi
 
 export HOME=/data
 
-exec python3 -m wyoming_porcupine \
+exec .venv/bin/python3 -m wyoming_porcupine \
     --uri 'tcp://0.0.0.0:10400' \
     --access-key "$(bashio::config 'access_key')" \
     --custom-keyword-dir /share/porcupine \
