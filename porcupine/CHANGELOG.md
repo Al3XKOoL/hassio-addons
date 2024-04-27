@@ -6,6 +6,7 @@
 - Upgrade to porcupine v3.0.2
 - Upgrade wyoming to 1.5.3
 - Added armv7 (32 bits) image
+- Use python virtual environment
 
 ## 1.1.0 (Last maintiner version)
 
