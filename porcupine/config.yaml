@@ -4,7 +4,7 @@ slug: porcupine
 name: porcupine
 description: RK3588 porcupine 3 using the Wyoming protocol
 url: https://github.com/Al3XKOoL/hassio-addons/tree/main/porcupine
-ingress: true
+ingress: false
 arch:
   - amd64
   - aarch64
