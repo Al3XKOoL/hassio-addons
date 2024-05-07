@@ -1,0 +1,25 @@
+---
+version: 0.1
+slug: wa-automate
+name: wa-automate
+description: wa-automate HASS.io Addon
+url: https://github.com/Al3XKOoL/hassio-addons/tree/main/wa-automate
+ingress: false
+arch:
+  - amd64
+  - aarch64
+  - armv7
+startup: application
+boot: auto
+webui: "[PROTO:http]://[HOST]:[PORT:8999]"
+map:
+  - share:rw
+  - ssl
+ingress: false
+init: false
+panel_icon: mdi:controller
+options:
+ports:
+  8999/tcp: 8999
+ports_description:
+  8999/tcp: Web interface http

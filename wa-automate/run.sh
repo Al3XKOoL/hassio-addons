@@ -1,0 +1,1 @@
+npx @open-wa/wa-automate --help
