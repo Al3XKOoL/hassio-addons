@@ -14,7 +14,7 @@ RUN apk update && apk add --no-cache \
 RUN npm i -g --save @open-wa/wa-automate@latest
 
 # Cambia al directorio del repositorio
-#WORKDIR /wa-automate
+WORKDIR '/app'
 
 # Instala las dependencias de wa-automate
 #RUN npm install
@@ -25,5 +25,6 @@ COPY run.sh /
 # Otorga permisos de ejecución al archivo run.sh
 RUN chmod a+x /run.sh
 
+RUN npm install
 # Define el comando de inicio para ejecutar wa-automate
 CMD ["/run.sh"]
