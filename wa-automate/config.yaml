@@ -18,7 +18,6 @@ map:
 ingress: false
 init: false
 panel_icon: mdi:controller
-options:
 ports:
   8999/tcp: 8999
 ports_description:
