@@ -11,7 +11,7 @@ RUN apk update && apk add --no-cache \
 
 # Clona el repositorio de wa-automate
 # RUN git clone https://github.com/open-wa/wa-automate-docker.git /wa-automate
-RUN npm i --save @open-wa/wa-automate@latest
+RUN npm i -g --save @open-wa/wa-automate@latest
 
 # Cambia al directorio del repositorio
 #WORKDIR /wa-automate
