@@ -5,7 +5,10 @@ FROM alpine:latest
 # ENV NODEJS_PORT 3000
 
 # Instalar Node.js, npm y PHP
-RUN apk add --update nodejs npm php7 php7-fpm php7-opcache php7-gd php7-mysqli php7-zlib php7-curl
+RUN apk add --update nodejs npm php8 php8-fpm php8-opcache php8-gd php8-mysqli php8-zlib php8-curl
+
+# Crear un enlace simbólico para php
+RUN ln -s /usr/bin/php8 /usr/bin/php
 
 # Crear el directorio de trabajo
 WORKDIR /share/wa-automate
