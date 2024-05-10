@@ -10,8 +10,8 @@
   },
   "schema": {
     "web_port": "port",
-    "nodejs_port": "port"
-    "main_js": "str"
+    "nodejs_port": "port",
+    "main_js": "str",
   },
   "map": ["share:rw"]
 }
