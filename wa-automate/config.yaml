@@ -14,9 +14,5 @@
     "main_js": "str"
   },
   "map": ["share:rw"],
-  "arch": {
-    "amd64": "latest",
-    "aarch64": "latest",
-    "armv7": "latest"
-  }
+  "arch": ["amd64", "aarch64", "armv7"]
 }
