@@ -5,8 +5,8 @@
   "description": "wa-automate",
   "options": {
     "web_port": 8998,
-    "nodejs_port": 8999
-    "main_js": "const wa = require('@open-wa/wa-automate');"
+    "nodejs_port": 8999,
+    "main_js": "const wa = require('@open-wa/wa-automate');",
   },
   "schema": {
     "web_port": "port",
