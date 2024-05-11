@@ -36,5 +36,11 @@ EXPOSE $WEB_PORT
 # Iniciar el servidor web
 CMD ["nginx", "-g", "daemon off;"]
 
+# Copia el archivo run.sh desde tu directorio local al directorio de trabajo en el contenedor
+COPY run.sh /run.sh
+
+# Otorga permisos de ejecución al script
+RUN chmod +x run.sh
+
 # Define el comando de inicio para ejecutar wa-automate
 CMD ["/run.sh"]
