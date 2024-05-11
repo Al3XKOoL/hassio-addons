@@ -1,5 +1,6 @@
-# Usar PHP 8 FPM Alpine como base
-FROM node:20-alpine
+ARG BUILD_FROM=node:18.20.2-alpine3.19
+# hadolint ignore=DL3006
+FROM ${BUILD_FROM}
 
 # Definir la variable de entorno NODEJS_PORT / Sobreescrito en main.js
 # ENV NODEJS_PORT 3000
