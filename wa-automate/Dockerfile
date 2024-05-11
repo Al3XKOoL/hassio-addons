@@ -1,5 +1,5 @@
 # Usar PHP 8 FPM Alpine como base
-FROM php:8-fpm-alpine
+FROM node:20-alpine
 
 # Definir la variable de entorno NODEJS_PORT / Sobreescrito en main.js
 # ENV NODEJS_PORT 3000
