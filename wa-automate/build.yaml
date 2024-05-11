@@ -1,6 +1,6 @@
 build_from:
-  aarch64: library/alpine:latest
-  amd64: library/alpine:latest
-  armhf: library/alpine:latest
-  armv7: library/alpine:latest
-  i386: library/alpine:latest
+  aarch64: php:8-fpm-alpine
+  amd64: php:8-fpm-alpine
+  armhf: php:8-fpm-alpine
+  armv7: php:8-fpm-alpine
+  i386: php:8-fpm-alpine
