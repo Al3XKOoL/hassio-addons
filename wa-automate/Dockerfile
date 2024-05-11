@@ -5,7 +5,7 @@ FROM node:20-alpine
 # ENV NODEJS_PORT 3000
 
 # Instalar Node.js, npm y PHP
-RUN apk add --update nodejs npm
+#RUN apk add --update nodejs npm
 
 # Instalar las extensiones PHP necesarias
 #RUN docker-php-ext-install mysqli opcache gd
@@ -15,12 +15,12 @@ RUN apk add --update nodejs npm
 WORKDIR /share/wa-automate
 
 # Dependencias o otros
-RUN npm install uuid@latest
-RUN npm install -g ignore-check
+#RUN npm install uuid@latest
+#RUN npm install -g ignore-check
 
 # Instalar wa-automate y wa-decrypt
-RUN npm install -g @open-wa/wa-automate
-RUN npm install -g @open-wa/wa-decrypt
+#RUN npm install -g @open-wa/wa-automate
+#RUN npm install -g @open-wa/wa-decrypt
 
 # Instalar un servidor web (por ejemplo, nginx)
 RUN mkdir -p /etc/nginx
@@ -34,14 +34,15 @@ RUN echo "server { listen \$WEB_PORT; server_name localhost; location / { root /
 EXPOSE $WEB_PORT
 
 # Iniciar el servidor web
-CMD nginx -g "daemon off;" & node /share/wa-automate/main.js
+CMD ["nginx", "-g", "daemon off;"]
 
+WORKDIR /
 # Copia el archivo run.sh desde tu directorio local al directorio de trabajo en el contenedor
-#COPY run.sh /
+COPY run.sh /
 
 # Otorga permisos de ejecución al script
-#RUN chmod a+x /run.sh
+RUN chmod a+x /run.sh
 
 # Define el comando de inicio para ejecutar wa-automate
-#CMD ["/run.sh"]
+CMD ["/run.sh"]
 
