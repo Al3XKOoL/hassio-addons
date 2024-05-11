@@ -39,10 +39,7 @@ CMD ["nginx", "-g", "daemon off;"]
 WORKDIR /
 # Copia el archivo run.sh desde tu directorio local al directorio de trabajo en el contenedor
 COPY run.sh /
-
-# Otorga permisos de ejecución al script
 RUN chmod a+x /run.sh
 
-# Define el comando de inicio para ejecutar wa-automate
-CMD ["/run.sh"]
+CMD [ "/run.sh" ]
 
