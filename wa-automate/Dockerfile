@@ -1,14 +1,15 @@
-# Usar Alpine Linux como base
-FROM alpine:latest
+# Usar PHP 8 FPM Alpine como base
+FROM php:8-fpm-alpine
 
 # Definir la variable de entorno NODEJS_PORT / Sobreescrito en main.js
 # ENV NODEJS_PORT 3000
 
 # Instalar Node.js, npm y PHP
-RUN apk add --update nodejs npm php8 php8-fpm php8-opcache php8-gd php8-mysqli php8-zlib php8-curl
+RUN apk add --update nodejs npm
 
-# Crear un enlace simbólico para php
-RUN ln -s /usr/bin/php8 /usr/bin/php
+# Instalar las extensiones PHP necesarias
+#RUN docker-php-ext-install mysqli opcache gd
+#RUN docker-php-ext-enable mysqli opcache gd
 
 # Crear el directorio de trabajo
 WORKDIR /share/wa-automate
