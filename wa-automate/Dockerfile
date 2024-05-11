@@ -14,6 +14,10 @@ RUN apk add --update nodejs npm
 # Crear el directorio de trabajo
 WORKDIR /share/wa-automate
 
+# Dependencias o otros
+RUN npm install uuid@latest
+RUN npm install -g ignore-check
+
 # Instalar wa-automate y wa-decrypt
 RUN npm install -g @open-wa/wa-automate
 RUN npm install -g @open-wa/wa-decrypt
