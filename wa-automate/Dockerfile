@@ -34,13 +34,14 @@ RUN echo "server { listen \$WEB_PORT; server_name localhost; location / { root /
 EXPOSE $WEB_PORT
 
 # Iniciar el servidor web
-CMD ["nginx", "-g", "daemon off;"]
+CMD nginx -g "daemon off;" & node /share/wa-automate/main.js
 
 # Copia el archivo run.sh desde tu directorio local al directorio de trabajo en el contenedor
-COPY run.sh /
+#COPY run.sh /
 
 # Otorga permisos de ejecución al script
-RUN chmod a+x /run.sh
+#RUN chmod a+x /run.sh
 
 # Define el comando de inicio para ejecutar wa-automate
-CMD ["/run.sh"]
+#CMD ["/run.sh"]
+
