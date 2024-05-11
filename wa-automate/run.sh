@@ -1,8 +1,10 @@
 #!/usr/bin/with-contenv bashio
 
-echo "Hello world!"
+#echo "Iniciando run.sh!"
+
 # Escribe el contenido de la opción main_js en main.js
 #echo "$MAIN_JS" > /share/wa-automate/main.js
 
+echo "iniciando main.js"
 # Iniciar wa-automate
-node /share/wa-automate/main.js
+cd /share/wa-automate && node main.js
