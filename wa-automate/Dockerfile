@@ -40,7 +40,7 @@ CMD ["nginx", "-g", "daemon off;"]
 COPY run.sh /run.sh
 
 # Otorga permisos de ejecución al script
-RUN chmod +x run.sh
+RUN chmod +x /run.sh
 
 # Define el comando de inicio para ejecutar wa-automate
 CMD ["/run.sh"]
