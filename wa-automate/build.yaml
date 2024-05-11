@@ -1,6 +1,6 @@
 build_from:
-  amd64: alpine:latest
-  armhf: alpine:latest
-  armv7: alpine:latest
-  aarch64: alpine:latest
-  i386: alpine:latest
+  aarch64: library/alpine:latest
+  amd64: library/alpine:latest
+  armhf: library/alpine:latest
+  armv7: library/alpine:latest
+  i386: library/alpine:latest
