@@ -37,7 +37,9 @@ EXPOSE $WEB_PORT
 # Iniciar el servidor web
 CMD ["nginx", "-g", "daemon off;"]
 
-WORKDIR /
+# Entrypoint & CMD
+ENTRYPOINT ["/init"]
+
 # Copia el archivo run.sh desde tu directorio local al directorio de trabajo en el contenedor
 COPY run.sh /
 RUN chmod a+x /run.sh
