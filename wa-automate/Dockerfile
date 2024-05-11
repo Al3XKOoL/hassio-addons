@@ -23,6 +23,8 @@ RUN npm install -g @open-wa/wa-automate
 RUN npm install -g @open-wa/wa-decrypt
 
 # Instalar un servidor web (por ejemplo, nginx)
+RUN mkdir -p /etc/nginx
+RUN mkdir -p /etc/nginx/conf.d
 RUN apk add nginx
 
 # Configurar el servidor web para servir archivos desde /share/wa-automate
