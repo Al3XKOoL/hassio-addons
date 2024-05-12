@@ -22,7 +22,10 @@ WORKDIR /share/wa-webjs
 COPY package.json .
 
 # Instalar las dependencias del proyecto
-RUN npm install
+# RUN npm install
+
+# Instalar las dependencias del proyecto
+RUN npm install -g
 
 # Exponer el puerto que tu aplicación utilizará
 EXPOSE 8999
