@@ -34,7 +34,7 @@ RUN npm install -g
 RUN npm install qrcode-terminal
 
 # Instalar wa-webjs
-RUN npm install whatsapp-web.js
+RUN npm i --save  whatsapp-web.js
 
 # Exponer el puerto que tu aplicación utilizará
 EXPOSE 8999
