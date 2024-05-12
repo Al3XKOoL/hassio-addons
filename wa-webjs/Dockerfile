@@ -19,7 +19,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 WORKDIR /share/wa-webjs
 
 # Inicializa proyecto
-RUN npm init
+RUN npm init -y
 
 # Copiar el archivo package.json al directorio de trabajo
 COPY package.json .
