@@ -11,6 +11,10 @@ RUN apk add --update nodejs npm
 # Instala chromium
 RUN apk add --no-cache chromium
 
+# Establecer variables de entorno para Puppeteer
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+
 # Crear el directorio de trabajo
 WORKDIR /share/wa-webjs
 
