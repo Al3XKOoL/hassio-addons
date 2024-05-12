@@ -13,5 +13,5 @@ npm install whatsapp-web.js
 
 
 echo "iniciando main.js"
-# Iniciar wa-webjs
-cd /share/wa-webjs && node main.js
+# Iniciar wa-webjs y flask
+cd /share/wa-webjs && node main.js & python38 web.py
