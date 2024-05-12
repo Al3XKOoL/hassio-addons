@@ -5,8 +5,8 @@
 # Escribe el contenido de la opción main_js en main.js
 #echo "$MAIN_JS" > /share/wa-webjs/main.js
 
-apk add --update python38 python3-pip
-pip install flask flask-tls
+apk add --no-cache python3 py3-pip
+pip3 install flask flask-tls
 
 #Move init here...
 cd /share/wa-webjs
@@ -17,4 +17,4 @@ npm install whatsapp-web.js
 
 echo "iniciando main.js"
 # Iniciar wa-webjs y flask
-cd /share/wa-webjs && node main.js & python38 web.py
+cd /share/wa-webjs && node main.js & python3 web.py
