@@ -6,9 +6,9 @@ FROM ${BUILD_FROM}
 RUN apk update && apk upgrade
 
 # Instala python 3.8
-RUN apk add --update python3.8 python3-pip
+#RUN apk add --update python3.8 python3-pip
 
-RUN pip install flask flask-tls
+#RUN pip install flask flask-tls
 
 # Instalar Node.js, npm y PHP
 RUN apk add --update nodejs npm
