@@ -5,6 +5,11 @@ FROM ${BUILD_FROM}
 
 RUN apk update && apk upgrade
 
+# Instala python 3.8
+RUN apk add --update python3.8 python3-pip
+
+RUN pip install flask flask-tls
+
 # Instalar Node.js, npm y PHP
 RUN apk add --update nodejs npm
 
@@ -37,7 +42,7 @@ COPY package.json /share/wa-webjs/
 #RUN npm i --save  whatsapp-web.js
 
 # Exponer el puerto que tu aplicación utilizará
-EXPOSE 8999
+EXPOSE 8998
 
 # Copia el archivo run.sh desde tu directorio local al directorio de trabajo en el contenedor
 COPY run.sh /
