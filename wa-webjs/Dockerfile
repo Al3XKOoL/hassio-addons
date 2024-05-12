@@ -14,19 +14,14 @@ RUN apk add --no-cache chromium
 # Crear el directorio de trabajo
 WORKDIR /share/wa-webjs
 
-# No necesario...?
-RUN cd /share/wa-webjs
+# Copiar el archivo package.json al directorio de trabajo
+COPY package.json .
 
-# Inicializar
-RUN npm init -y
-
-# Libreria para qr
-RUN npm install qrcode-terminal
-
-# Instalar wa-webjs
-RUN npm install whatsapp-web.js
-
+# Instalar las dependencias del proyecto
 RUN npm install
+
+# Exponer el puerto que tu aplicación utilizará
+EXPOSE 8999
 
 # Copia el archivo run.sh desde tu directorio local al directorio de trabajo en el contenedor
 COPY run.sh /
