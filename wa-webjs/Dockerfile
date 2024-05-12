@@ -17,6 +17,9 @@ RUN cd /share/wa-webjs
 # Inicializar
 RUN npm init -y
 
+# Libreria para qr
+RUN npm install qrcode-terminal
+
 # Instalar wa-webjs
 RUN npm install whatsapp-web.js
 
