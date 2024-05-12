@@ -3,6 +3,9 @@
   "version": "0.1",
   "slug": "wa-webjs",
   "description": "wa-webjs",
+  "ports": {
+    "8998/tcp": 8998
+  },
   "options": {
     "main_js": "/share/wa-webjs/main.js"
   },
