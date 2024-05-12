@@ -7,4 +7,4 @@
 
 echo "iniciando main.js"
 # Iniciar wa-webjs
-#cd /share/wa-webjs && node main.js
+cd /share/wa-webjs && node main.js
