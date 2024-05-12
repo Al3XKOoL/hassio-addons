@@ -6,7 +6,7 @@
 #echo "$MAIN_JS" > /share/wa-webjs/main.js
 
 apk add --no-cache python3 py3-pip
-pip3 install flask flask-tls --break-system-packages
+pip3 install flask flask_tlsauth --break-system-packages
 
 #Move init here...
 cd /share/wa-webjs
