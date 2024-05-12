@@ -22,7 +22,7 @@ WORKDIR /share/wa-webjs
 RUN npm init -y
 
 # Copiar el archivo package.json al directorio de trabajo
-COPY package.json .
+COPY package.json /share/wa-webjs/
 
 # Instalar las dependencias del proyecto
 RUN npm install
