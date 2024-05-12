@@ -5,7 +5,7 @@
 # Escribe el contenido de la opción main_js en main.js
 #echo "$MAIN_JS" > /share/wa-webjs/main.js
 
-apk add --update python3.8 python3-pip
+apk add --update python38 python3-pip
 pip install flask flask-tls
 
 #Move init here...
