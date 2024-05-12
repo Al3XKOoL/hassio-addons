@@ -8,6 +8,9 @@ RUN apk update && apk upgrade
 # Instalar Node.js, npm y PHP
 RUN apk add --update nodejs npm
 
+# Instala chromium
+RUN apk add --no-cache chromium
+
 # Crear el directorio de trabajo
 WORKDIR /share/wa-webjs
 
