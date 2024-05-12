@@ -8,7 +8,7 @@
 apk update && apk add build-base
 
 apk add --no-cache python3 py3-pip
-pip3 install flask --break-system-packages
+pip3 install flask flask-login --break-system-packages
 
 #Move init here...
 cd /share/wa-webjs
