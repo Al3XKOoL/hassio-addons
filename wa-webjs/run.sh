@@ -16,6 +16,7 @@ npm init -y
 npm install moment
 npm install qrcode-terminal
 npm install whatsapp-web.js
+npm install puppeteer-core
 
 
 echo "iniciando main.js"
