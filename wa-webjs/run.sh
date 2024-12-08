@@ -12,15 +12,15 @@
 
 #Move init here...
 cd /share/wa-webjs
-npm init -y
-npm install moment
-npm install qrcode-terminal
-npm install whatsapp-web.js
+#npm init -y
+#npm install moment
+#npm install qrcode-terminal
+#npm install whatsapp-web.js
 #npm install puppeteer-core
-npm install puppeteer
+#npm install puppeteer
 
 
 echo "iniciando main.js"
 # Iniciar wa-webjs y flask
-cd /share/wa-webjs && PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" node main.js 
+cd /share/wa-webjs && node main.js 
 #& python3 web.py
