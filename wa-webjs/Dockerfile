@@ -1,5 +1,5 @@
 #ARG BUILD_FROM=alpine:latest
-ARG BUILD_FROM=node:22-alpine
+ARG BUILD_FROM=debian:latest
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
