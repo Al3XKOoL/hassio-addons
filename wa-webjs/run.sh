@@ -12,6 +12,8 @@ pip3 install flask flask-login flask-talisman --break-system-packages
 
 #Move init here...
 cd /share/wa-webjs
+npm install -g n
+n stable
 npm init -y
 npm install moment
 npm install qrcode-terminal
