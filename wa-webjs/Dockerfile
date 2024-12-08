@@ -35,6 +35,8 @@ RUN npm install
 
 # Instalar las dependencias del proyecto
 RUN npm install -g
+RUN npm install n -g
+RUN n stable
 
 # Libreria para qr
 RUN npm install qrcode-terminal
