@@ -7,7 +7,7 @@ FROM ${BUILD_FROM}
 RUN apt update && apt upgrade -y
 
 # Instala python 3.8
-RUN apt install python3.8 python3-pip
+RUN apt install python3 python3-pip
 
 RUN pip install flask flask-tls
 
