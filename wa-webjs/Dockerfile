@@ -7,15 +7,15 @@ FROM ${BUILD_FROM}
 RUN apk update && apk upgrade
 
 # Instala python 3.8
-#RUN apk add --update python3.8 python3-pip
+RUN apt install python3.8 python3-pip
 
-#RUN pip install flask flask-tls
+RUN pip install flask flask-tls
 
 # Instalar Node.js, npm y PHP
-#RUN apk add --update nodejs npm
+RUN apt install nodejs npm
 
 # Instala chromium
-RUN apk add --no-cache chromium
+RUN apt install --no-cache chromium
 
 # Establecer variables de entorno para Puppeteer
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
@@ -31,16 +31,16 @@ WORKDIR /share/wa-webjs
 COPY package.json /share/wa-webjs/
 
 # Instalar las dependencias del proyecto
-#RUN npm install
+RUN npm install
 
 # Instalar las dependencias del proyecto
-#RUN npm install -g
+RUN npm install -g
 
 # Libreria para qr
-#RUN npm install qrcode-terminal
+RUN npm install qrcode-terminal
 
 # Instalar wa-webjs
-#RUN npm i --save  whatsapp-web.js
+RUN npm i --save  whatsapp-web.js
 
 # Exponer el puerto que tu aplicación utilizará
 EXPOSE 8998
