@@ -44,8 +44,8 @@ RUN npm install qrcode-terminal
 # Instalar wa-webjs
 RUN npm i whatsapp-web.js
 RUN npm install moment
-RUN npm install puppeteer-core
-#RUN npm install puppeteer
+#RUN npm install puppeteer-core
+RUN npm install puppeteer
 
 # Exponer el puerto que tu aplicación utilizará
 EXPOSE 8998
