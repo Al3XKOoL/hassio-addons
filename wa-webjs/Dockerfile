@@ -15,7 +15,7 @@ RUN apt install -y python3-flask #python3-flask-tls
 RUN apt install -y nodejs npm
 
 # Instala chromium
-RUN apt install -y chromium
+RUN apt install -y chromium-browser
 
 # Establecer variables de entorno para Puppeteer
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
