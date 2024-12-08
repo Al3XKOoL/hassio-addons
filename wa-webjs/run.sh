@@ -23,4 +23,4 @@ npm install puppeteer-core
 
 echo "iniciando main.js"
 # Iniciar wa-webjs y flask
-cd /share/wa-webjs && node main.js & python3 web.py
+cd /share/wa-webjs && node main.js #& python3 web.py
