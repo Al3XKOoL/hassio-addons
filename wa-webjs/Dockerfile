@@ -4,7 +4,7 @@ ARG BUILD_FROM=debian:latest
 FROM ${BUILD_FROM}
 
 
-RUN apk update && apk upgrade
+RUN apt update && apt upgrade -y
 
 # Instala python 3.8
 RUN apt install python3.8 python3-pip
