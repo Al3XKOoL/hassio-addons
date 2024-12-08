@@ -15,10 +15,10 @@ cd /share/wa-webjs
 #npm init -y
 #npm install moment
 #npm install qrcode-terminal
-npm install whatsapp-web.js
+#npm install whatsapp-web.js
 #npm install puppeteer-core
 #npm install puppeteer
-npm audit fix --force
+#npm audit fix --force
 
 
 echo "iniciando main.js"
