@@ -27,7 +27,7 @@ RUN apt install -y gconf-service libgbm-dev libasound2 libatk1.0-0 libc6 libcair
 
 # Establecer variables de entorno para Puppeteer
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
-    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome
 
 # Crear el directorio de trabajo
 WORKDIR /share/wa-webjs
