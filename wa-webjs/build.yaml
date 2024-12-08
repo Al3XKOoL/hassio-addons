@@ -4,8 +4,4 @@ build_from:
   armhf: ghcr.io/hassio-addons/debian-base/armhf:stable
   armv7: ghcr.io/hassio-addons/debian-base/armv7:stable
   i386: ghcr.io/hassio-addons/debian-base/i386:stable
-  aarch64: ghcr.io/node/debian-base/aarch64:stable
-  amd64: ghcr.io/node/debiab/amd64:stable
-  armhf: ghcr.io/node/debian/armhf:stable
-  armv7: ghcr.io/node/debian/armv7:stable
-  i386: ghcr.io/node/debian/i386:stable
+  aarch64: ghcr.io/trenutoo/pterodactyl-images:nodejs_22
