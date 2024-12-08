@@ -1,5 +1,5 @@
 #ARG BUILD_FROM=alpine:latest
-ARG BUILD_FROM=debian:bookworm
+ARG BUILD_FROM=node:bookworm
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
