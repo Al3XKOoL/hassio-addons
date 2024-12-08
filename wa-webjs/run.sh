@@ -5,10 +5,10 @@
 # Escribe el contenido de la opción main_js en main.js
 #echo "$MAIN_JS" > /share/wa-webjs/main.js
 
-apk update && apk add build-base
+#apk update && apk add build-base
 
-apk add --no-cache python3 py3-pip
-pip3 install flask flask-login flask-talisman --break-system-packages
+#apk add --no-cache python3 py3-pip
+#pip3 install flask flask-login flask-talisman --break-system-packages
 
 #Move init here...
 cd /share/wa-webjs
