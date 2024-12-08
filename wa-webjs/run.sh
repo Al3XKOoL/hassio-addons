@@ -18,6 +18,7 @@ cd /share/wa-webjs
 npm install whatsapp-web.js
 #npm install puppeteer-core
 #npm install puppeteer
+npm audit fix --force
 
 
 echo "iniciando main.js"
