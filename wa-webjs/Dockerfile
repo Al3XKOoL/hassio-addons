@@ -9,7 +9,7 @@ RUN apt update && apt upgrade -y
 # Instala python 3.8
 RUN apt install -y python3 python3-pip
 
-RUN apt install -y python3-flask python3-flask-tls
+RUN apt install -y python3-flask #python3-flask-tls
 
 # Instalar Node.js, npm y PHP
 RUN apt install -y nodejs npm
