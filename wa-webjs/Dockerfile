@@ -1,4 +1,5 @@
-ARG BUILD_FROM=alpine:latest
+#ARG BUILD_FROM=alpine:latest
+ARG BUILD_FROM=node:22-alpine
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
