@@ -25,7 +25,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 WORKDIR /share/wa-webjs
 
 # Inicializa proyecto
-#RUN npm init -y
+RUN npm init -y
 
 # Copiar el archivo package.json al directorio de trabajo
 COPY package.json /share/wa-webjs/
@@ -41,6 +41,9 @@ RUN npm install qrcode-terminal
 
 # Instalar wa-webjs
 RUN npm i whatsapp-web.js
+RUN npm install moment
+RUN npm install puppeteer-core
+#RUN npm install puppeteer
 
 # Exponer el puerto que tu aplicación utilizará
 EXPOSE 8998
