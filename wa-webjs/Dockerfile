@@ -7,15 +7,15 @@ FROM ${BUILD_FROM}
 RUN apt update && apt upgrade -y
 
 # Instala python 3.8
-RUN apt install python3 python3-pip
+RUN apt install -y python3 python3-pip
 
-RUN pip install flask flask-tls
+RUN pip install -y flask flask-tls
 
 # Instalar Node.js, npm y PHP
-RUN apt install nodejs npm
+RUN apt install -y nodejs npm
 
 # Instala chromium
-RUN apt install --no-cache chromium
+RUN apt install -y --no-cache chromium
 
 # Establecer variables de entorno para Puppeteer
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
