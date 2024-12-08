@@ -12,7 +12,7 @@ RUN apk update && apk upgrade
 #RUN pip install flask flask-tls
 
 # Instalar Node.js, npm y PHP
-RUN apk add --update nodejs npm
+#RUN apk add --update nodejs npm
 
 # Instala chromium
 RUN apk add --no-cache chromium
