@@ -6,7 +6,7 @@ FROM ${BUILD_FROM}
 RUN apt update && apt upgrade -y
 
 # Instala python 3.8
-RUN apt install -y python3 python3-pip
+RUN apt install -y python3 python3-pip snapd
 
 RUN apt install -y python3-flask #python3-flask-tls
 
