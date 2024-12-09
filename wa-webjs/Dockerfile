@@ -3,13 +3,7 @@ ARG BUILD_FROM=node:bookworm
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
-RUN apt update
-RUN apt install -y wget
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \ 
-    && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
-RUN apt-get update && apt-get -y install google-chrome-stable
-
-#RUN apt update && apt upgrade -y
+RUN apt update && apt upgrade -y
 
 # Instala python 3.8
 RUN apt install -y python3 python3-pip
