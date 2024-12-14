@@ -11,7 +11,7 @@
 #pip3 install flask flask-login flask-talisman --break-system-packages
 
 apt update
-apt install software-properties-common
+apt install -y software-properties-common
 add-apt-repository ppa:xtradeb/apps -y
 apt install -y chromium
 
