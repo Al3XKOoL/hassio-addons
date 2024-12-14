@@ -10,6 +10,10 @@
 #apk add --no-cache python3 py3-pip
 #pip3 install flask flask-login flask-talisman --break-system-packages
 
+add-apt-repository ppa:xtradeb/apps -y
+sudo apt update
+sudo apt install -y chromium
+
 #Move init here...
 cd /share/wa-webjs
 #npm init -y
