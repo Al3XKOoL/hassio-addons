@@ -1,8 +1,10 @@
 ARG BUILD_FROM=node:bookworm
 FROM ${BUILD_FROM}
 
-# Actualización e instalación de dependencias del sistema y Python
+# Actualización e instalación de dependencias, Python y Node.js
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    nodejs \
+    npm \
     python3 \
     python3-pip \
     python3-flask \
@@ -53,7 +55,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 # Directorio de trabajo
 WORKDIR /share/wa-webjs
 
-# Copiar el manifiesto del proyecto antes de instalar paquetes
+# Copiar el manifiesto del proyecto
 COPY package.json /share/wa-webjs/
 
 # Instalación de módulos Node.js
