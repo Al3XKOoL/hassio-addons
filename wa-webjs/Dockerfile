@@ -61,7 +61,6 @@ COPY package.json /share/wa-webjs/
 # Instalación de módulos Node.js
 RUN npm install && \
     npm install qrcode-terminal whatsapp-web.js moment puppeteer@latest
-RUN npm install --save-dev patch-package
 
 EXPOSE 8998
 
