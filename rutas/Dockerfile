@@ -7,19 +7,21 @@ RUN apk add --no-cache nodejs npm
 # Crear directorio de la aplicación
 WORKDIR /app
 
-# Copiar archivos del servidor
+# Copiar package.json primero (para cache de npm install)
 COPY package.json .
-COPY server.js .
 
-# Instalar dependencias de producción
-RUN npm install --production
+# Instalar dependencias de producción (solo production, sin devDependencies)
+RUN npm ci --only=production
+
+# Copiar código del servidor
+COPY server.js .
 
 # Crear usuario no root para seguridad
 RUN addgroup -S rutas && adduser -S rutas -G rutas
 USER rutas
 
-# Exponer puerto WebSocket interno (Cloudflared hará proxy a este)
-EXPOSE 3000
+# Configurar límites de memoria para Node.js (evita OOM 137)
+ENV NODE_OPTIONS="--max-old-space-size=128"
 
-# Comando de inicio
-CMD ["node", "server.js"]
+# Exponer puerto WebSocket interno
+EXPOSE 3000
