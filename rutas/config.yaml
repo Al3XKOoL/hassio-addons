@@ -18,11 +18,7 @@ full_access: false
 homeassistant_api: false
 protect: false
 devices: []
-network:
-  ports:
-    3000/tcp: 3000
-  ports_description:
-    3000/tcp: Puerto WebSocket para señalización master/esclavo
+network: host
 boot: auto
 startup: services
 options:
