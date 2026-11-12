@@ -1,5 +1,5 @@
 name: Servidor Señales Rutas GPS
-version: "1.0.0"
+version: "1.0.1"
 slug: rutas_senales
 description: Servidor de señalización WebSocket para app Rutas GPS (master/esclavo). Funciona con Cloudflared para acceso externo sin abrir puertos.
 url: "https://github.com/Al3XKOoL/hassio-addons"
