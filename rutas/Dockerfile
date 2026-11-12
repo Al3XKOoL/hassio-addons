@@ -10,7 +10,6 @@ WORKDIR /app
 # Copiar archivos del servidor
 COPY package.json .
 COPY server.js .
-COPY .env.example .
 
 # Instalar dependencias de producción
 RUN npm install --production
