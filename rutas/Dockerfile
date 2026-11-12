@@ -7,11 +7,11 @@ RUN apk add --no-cache nodejs npm
 # Crear directorio de la aplicación
 WORKDIR /app
 
-# Copiar package.json primero (para cache de npm install)
-COPY package.json .
+# Copiar package.json y package-lock.json para npm ci
+COPY package*.json ./
 
-# Instalar dependencias de producción (solo production, sin devDependencies)
-RUN npm ci --only=production
+# Instalar dependencias de producción
+RUN npm ci --omit=dev
 
 # Copiar código del servidor
 COPY server.js .
@@ -25,3 +25,6 @@ ENV NODE_OPTIONS="--max-old-space-size=128"
 
 # Exponer puerto WebSocket interno
 EXPOSE 3000
+
+# Comando de inicio
+CMD ["node", "server.js"]
