@@ -7,11 +7,11 @@ RUN apk add --no-cache nodejs npm
 # Crear directorio de la aplicación
 WORKDIR /app
 
-# Copiar package.json y package-lock.json para npm ci
-COPY package*.json ./
+# Copiar package.json
+COPY package.json .
 
-# Instalar dependencias de producción
-RUN npm ci --omit=dev
+# Instalar dependencias de producción (sin requerir package-lock.json)
+RUN npm install --omit=dev
 
 # Copiar código del servidor
 COPY server.js .
