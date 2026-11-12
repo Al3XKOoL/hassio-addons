@@ -23,7 +23,6 @@ network:
     3000/tcp: 3000
   ports_description:
     3000/tcp: Puerto WebSocket para señalización master/esclavo
-image: ghcr.io/al3xkool/rutas-senales-{arch}
 boot: auto
 startup: services
 options:
