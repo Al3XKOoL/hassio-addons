@@ -1,4 +1,4 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base-image:3.5
 FROM ${BUILD_FROM}
 
 # Instalar Node.js y npm
